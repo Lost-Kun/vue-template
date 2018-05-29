@@ -39,6 +39,8 @@ export default {
     await this.$http.get('/general/userinfo').then((data) => {
       this.$store.commit('SET_USERINFO', data);
     });
+    this.getMainHeight();
+    window.addEventListener('resize', this.getMainHeight);
   },
   methods: {
     async logout() {
@@ -50,6 +52,9 @@ export default {
     },
     profileClick() {
       window.location.pathname = '/profile';
+    },
+    getMainHeight() {
+      this.$store.commit('SET_MAINHEIGHT', document.querySelector('#main').offsetHeight - 45);
     },
   },
 };

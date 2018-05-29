@@ -8,6 +8,7 @@ Vue.use(Vuex);
 const state = {
   userInfo: {},
   mainHeight: 0,
+  selectedEntity: {},
 };
 
 export default new Vuex.Store({

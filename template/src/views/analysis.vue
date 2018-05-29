@@ -4,8 +4,8 @@
       <div class="entityBox">
         <div class="entity">
           <i class="iconfont icon-biaotitubiao"></i>&nbsp;
-          <el-tooltip :content="selectEntity.showName" placement="bottom">
-            <span>{{selectEntity.showName}}</span>
+          <el-tooltip :content="selectedEntity.showName" placement="bottom">
+            <span>{{selectedEntity.showName}}</span>
           </el-tooltip>
         </div>
         <div class="backSearch">
@@ -63,16 +63,18 @@
 export default {
   data() {
     return {
-      selectEntity: {},
+      selectedEntity: {},
       selectedMenuIndex: '菜单1',
       currentView: '',
     };
   },
   created() {
-    const selectEntity = JSON.parse(sessionStorage.getItem('selectEntity_pinduoduo'));
-    if (selectEntity && selectEntity.name) {
-      selectEntity.showName = selectEntity.name;
-      this.selectEntity = selectEntity;
+    const selectedEntity = JSON.parse(sessionStorage.getItem('selectedEntity_pinduoduo'));
+    if (selectedEntity && selectedEntity.name) {
+      selectedEntity.showName = selectedEntity.name;
+      this.selectedEntity = selectedEntity;
+      this.$store.commit('SET_SELECTEDENTITY', selectedEntity);
+      this.selectFirstMenu();
     } else {
       this.backToSearch();
     }
@@ -80,6 +82,8 @@ export default {
   methods: {
     backToSearch() {
       this.$router.push('/pinduoduo/search');
+    },
+    selectFirstMenu() {
     },
     menuSelect(index, indexPath) {
       // 切换组件

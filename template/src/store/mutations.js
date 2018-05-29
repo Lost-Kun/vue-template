@@ -5,4 +5,7 @@ export default {
   SET_USERINFO(state, param) {
     state.userInfo = param;
   },
+  SET_SELECTEDENTITY(state, param) {
+    state.selectedEntity = param;
+  },
 };
