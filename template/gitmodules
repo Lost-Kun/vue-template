@@ -1,0 +1,3 @@
+[submodule "fuyao-swagger-api"]
+	path = fuyao-swagger-api
+	url = ssh://git@118.89.220.56:7999/vs/fuyao_swagger_api.git
