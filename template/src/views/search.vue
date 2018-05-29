@@ -274,7 +274,7 @@ export default {
       }
     },
     routeChange(selectEntity) {
-      sessionStorage.setItem('selectEntity_pinduoduo', JSON.stringify(selectEntity));
+      sessionStorage.setItem('selectedEntity_pinduoduo', JSON.stringify(selectEntity));
       this.$router.push({ path: '/pinduoduo/analysis' });
     },
   },
