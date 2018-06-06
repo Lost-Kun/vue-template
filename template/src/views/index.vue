@@ -54,7 +54,7 @@ export default {
       window.location.pathname = '/profile';
     },
     getMainHeight() {
-      this.$store.commit('SET_MAINHEIGHT', document.querySelector('#main').offsetHeight - 45);
+      this.$store.commit('SET_MAINHEIGHT', this.$el.querySelector('.body').offsetHeight - 45);
     },
   },
 };
