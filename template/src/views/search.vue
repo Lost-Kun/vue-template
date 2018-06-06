@@ -208,6 +208,10 @@ export default {
       }
     },
     fuzzyQuery() {
+      if (this.searchText.replace(/(^\s*)|(\s*$)/g, '') === '') {
+        return;
+      }
+
       this.isSearching = true;
       // ajax查询搜索
       setTimeout(() => {
