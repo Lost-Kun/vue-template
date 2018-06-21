@@ -18,7 +18,7 @@
     "root_path": {
       "type": "string",
       "required": true,
-      "label": "web router root path"
+      "label": "router root path"
     }
   },
   "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}"

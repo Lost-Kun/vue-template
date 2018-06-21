@@ -71,7 +71,7 @@
             </div>
           </div>
           <div class="searchResultBox_content" v-loading="isSearching">
-            <el-collapse  v-model="activeNames">
+            <el-collapse v-model="activeNames">
               <el-collapse-item name="1">
                 <template slot="title">
                   <span class="content_title">
@@ -93,7 +93,7 @@
                       :class="getSearchItemClass(item)"
                       @click="chooseSearchItem(item)"
                       :key="'group_'+keyGroup+'_'+key"
-                    >{{item.pName?item.pName+'>'+item.name:item.name}}
+                    >\{\{item.pName?item.pName+'>'+item.name:item.name\}\}
                     </div>
                   </div>
                 </div>
@@ -113,7 +113,7 @@
                       :class="getSearchItemClass(item)"
                       @click="chooseSearchItem(item)"
                       :key="'searchStore_'+key"
-                    >{{item.name}}
+                    >\{\{item.name\}\}
                     </div>
                   </div>
                 </div>
