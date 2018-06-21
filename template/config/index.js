@@ -56,7 +56,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/pinduoduo/',
+    assetsPublicPath: '/{{ root_path }}/',
 
     /**
      * Source Maps

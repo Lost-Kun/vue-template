@@ -7,8 +7,8 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/pinduoduo',
-      redirect: '/pinduoduo/search',
+      path: '/{{ root_path }}',
+      redirect: '/{{ root_path }}/search',
       component: () => import('@/views/index'),
       children: [
         {

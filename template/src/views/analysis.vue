@@ -81,7 +81,7 @@ export default {
   },
   methods: {
     backToSearch() {
-      this.$router.push('/pinduoduo/search');
+      this.$router.push('/{{ root_path }}/search');
     },
     selectFirstMenu() {
     },
